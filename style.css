@@ -1,0 +1,37 @@
+/* Layout: one full-bleed night stage. The scene plays in place: words, a river of letters, a clay pot, a rose. A single dark look by choice. */
+:root {
+  --night: #0c070f;
+  --dusk: #2a1020;
+  --ink: #f8e6ec;
+  --gold: #ffc9a0;
+  --rose: #ff5b86;
+  --clay: #c9663c;
+  --leaf: #4fae6f;
+  color-scheme: dark;
+}
+html, body { height: 100%; }
+body {
+  margin: 0;
+  overflow: hidden;
+  background: radial-gradient(120% 90% at 50% 100%, var(--dusk) 0%, var(--night) 62%), var(--night);
+  color: var(--ink);
+  font: 700 13px/1.4 "JetBrains Mono", ui-monospace, Menlo, Consolas, "Courier New", monospace;
+}
+#stage { position: relative; width: 100%; height: 100%; }
+#cv { display: block; position: absolute; inset: 0; }
+#again {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  color: var(--gold);
+  border: 1px solid rgba(255, 201, 160, 0.35);
+  border-radius: 4px;
+  padding: 6px 10px;
+  font: inherit;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+#again:hover { opacity: 1; }
+#again:focus-visible { opacity: 1; outline: 2px solid var(--gold); outline-offset: 2px; }
